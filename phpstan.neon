@@ -1,0 +1,11 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/http/controllers/
+
+    level: 6
+
+    checkMissingIterableValueType: false

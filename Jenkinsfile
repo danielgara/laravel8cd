@@ -31,5 +31,10 @@ pipeline {
                 sh "vendor/bin/phpunit --coverage-html 'reports/coverage'"
             }
         }
+        stage("Static code analysis larastan") {
+            steps {
+                sh "vendor/bin/phpstan analyse --memory-limit=2G"
+            }
+        }
     }
 }
