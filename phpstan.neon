@@ -4,7 +4,7 @@ includes:
 parameters:
 
     paths:
-        - app/http/controllers/
+        - app/Http/Controllers/
 
     level: 6
 
