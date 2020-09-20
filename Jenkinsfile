@@ -36,5 +36,10 @@ pipeline {
                 sh "vendor/bin/phpstan analyse --memory-limit=2G"
             }
         }
+        stage("Static code analysis phpcs") {
+            steps {
+                sh "vendor/bin/phpcs"
+            }
+        }
     }
 }
