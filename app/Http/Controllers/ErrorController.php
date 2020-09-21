@@ -13,6 +13,7 @@ class ErrorController extends Controller
      */
     public function home()
     {
+        //test triggers
         return redirect()->route('home.index');
     }
 }
