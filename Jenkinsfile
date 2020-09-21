@@ -41,11 +41,6 @@ pipeline {
                 sh "vendor/bin/phpcs"
             }
         }
-        stage("Package") {
-            steps {
-                sh "./gradlew build"
-            }
-        }
         stage("Docker build") {
             steps {
                 sh "docker build -t danielgara/laravel8cd ."
