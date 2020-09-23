@@ -1,2 +1,2 @@
 #!/bin/bash
-test $(curl localhost:8080/public/sum/2/4) -eq 6
+test $(curl $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' laravel8cd)/public/sum/7/8) -eq 6
