@@ -46,5 +46,15 @@ pipeline {
                 sh "docker build -t danielgara/laravel8cd ."
             }
         }
+        stage("Docker push") {
+               environment {
+                    DOCKER_USERNAME = credentials("docker-user")
+                    DOCKER_PASSWORD = credentials("docker-password")
+               }
+               steps {
+                    sh "docker login --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}"
+                    sh "docker push danielgara/laravel8cd"
+               }
+          }
     }
 }
