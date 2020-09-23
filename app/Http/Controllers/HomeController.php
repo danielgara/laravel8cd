@@ -29,9 +29,9 @@ class HomeController extends Controller
     /**
      * Return sumatory
      *
-     * @return string
+     * @return int
      */
-    public function sum($num1,$num2)
+    public function sum(int $num1,int $num2)
     {
         return $num1+$num2;
     }
