@@ -69,6 +69,7 @@ pipeline {
             post {
                 always {
                     sh "docker stop laravel8cd"
+                    sh "docker rm laravel8cd"
                 }
             }
         }
