@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return redirect()->route('home.index');
     }
+
+    /**
+     * Return sumatory
+     *
+     * @return string
+     */
+    public function sum($num1,$num2)
+    {
+        return $num1+$num2;
+    }
 }

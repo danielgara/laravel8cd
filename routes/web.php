@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
 Route::get('/home', 'App\Http\Controllers\HomeController@home')->name("home.home");
+Route::get('/sum/{num1}/{num2}', 'App\Http\Controllers\HomeController@sum')->name("home.sum");
 
 Auth::routes();
