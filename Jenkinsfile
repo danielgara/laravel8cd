@@ -18,6 +18,7 @@ pipeline {
                 sh 'echo DB_DATABASE=${DB_DATABASE} >> .env'
                 sh 'echo DB_PASSWORD=${DB_PASSWORD} >> .env'
                 sh 'php artisan key:generate'
+                sh 'cp .env .env.testing'
                 sh 'php artisan migrate'
             }
         }
@@ -63,8 +64,9 @@ pipeline {
         }
         stage("Acceptance test") {
             steps {
-                sleep 60
+                sleep 30
                 sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
+                sh "vendor\bin\codecept.bat run"
             }
             post {
                 always {
