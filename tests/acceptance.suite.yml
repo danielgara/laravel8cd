@@ -8,6 +8,6 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://172.17.0.3/laravel8cd/public/
+            url: http://172.17.0.3/public/
         - \Helper\Acceptance
 step_decorators: ~        
