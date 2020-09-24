@@ -66,7 +66,7 @@ pipeline {
             steps {
                 sleep 30
                 sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
-                sh "vendor/bin/codecept.bat run"
+                sh "vendor/bin/codecept run"
             }
             post {
                 always {
